@@ -98,6 +98,7 @@ class Command(BaseCommand):
                             )
                         
                         elif signal == 0 and portfolio[stock] > 0:
+                            shares_to_sell = portfolio[stock]
                             money += price * portfolio[stock]
                             portfolio[stock] = 0
                             num_sells += 1
@@ -109,7 +110,7 @@ class Command(BaseCommand):
                                 trade_type="SELL",
                                 trade_date=current_date,
                                 price=price,
-                                shares=portfolio[stock]
+                                shares=shares_to_sell
                             )
 
                     current_portfolio_value = money + sum(portfolio[s] * price_lookup.get((current_date, s), 0) for s in portfolio)
