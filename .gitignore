@@ -1,5 +1,6 @@
 algo_trading_venv
 data_and_models
+data_dump.json
 
 *.pyc
 __pycache__/
