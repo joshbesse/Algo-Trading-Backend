@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'algo_trading.trades',
+    'algo_trading.algo_trading.trades',
     'rest_framework',
     'corsheaders',
 ]
