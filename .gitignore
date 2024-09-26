@@ -1,0 +1,12 @@
+algo_trading_venv
+data_and_models
+
+*.pyc
+__pycache__/
+staticfiles/
+.env
+*.pot
+*.py[cod]
+*.sqlite3
+db.sqlite3
+media/
