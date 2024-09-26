@@ -20,7 +20,6 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -42,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'algo_trading.trades',
+    'trades',
     'rest_framework',
     'corsheaders',
 ]
@@ -82,12 +81,12 @@ WSGI_APPLICATION = 'algo_trading.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
+if 'DATABASE_URL' in os.environ and 'sqlite' not in os.environ['DATABASE_URL']:
     DATABASES = {
         'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
 else:
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # Use SQLite as the default database
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',

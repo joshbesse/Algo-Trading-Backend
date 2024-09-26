@@ -5,10 +5,11 @@ import sys
 
 
 def main():
-    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)))  # Adds 'backend'
+    sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'algo_trading'))
 
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'algo_trading.algo_trading.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'algo_trading.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
