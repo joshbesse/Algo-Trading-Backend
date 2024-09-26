@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-f(kfbe60ns82-)4dtq@j#*rgn2e6qhxzvoz96jy=@vj*%czrbb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'algo-trading-backend.herokuapp.com']
 
 
 # Application definition
