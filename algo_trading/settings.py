@@ -135,9 +135,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True 
-
-#ORS_ALLOWED_ORIGINS = [
-    #'http://localhost:3000',
-    #'https://algo-trading.netlify.app'
-#]
+CORS_ALLOWED_ORIGINS = [
+    'https://66f62c9ba744c2b413936506--algo-trading.netlify.app/',
+]
