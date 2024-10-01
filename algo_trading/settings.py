@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-f(kfbe60ns82-)4dtq@j#*rgn2e6qhxzvoz96jy=@vj*%czrbb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'algo-trading-backend-f273d82bdf99.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'localhost',
+    'algo-trading-backend-f273d82bdf99.herokuapp.com',
+    '127.0.0.1']
 
 
 # Application definition
@@ -137,6 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "https://66f63e2b51454fc3ac9fa880--algo-trading.netlify.app",
+    "https://algo-trading.netlify.app"
 ]
 
 CORS_ALLOW_CREDENTIALS = True 
